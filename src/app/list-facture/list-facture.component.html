@@ -1,0 +1,93 @@
+<!-- <div class="main">
+    <div class="headingContainer">
+           
+        <h1 class="heading">
+            Liste de facture Disponible 
+        </h1>
+        <button class="btn btn-secondary mt-1 button" (click)="goBack()">Go Back</button>
+    </div>
+    <div class="table-responsive shadow">
+        <table class="table">
+          <thead>
+            <tr>
+                <th>#</th>
+                <th>Date-Emission</th>
+                <th>Reference</th>
+                <th>Description</th>
+                <th>Creancier</th>
+                <th>Montant</th>
+                <th>Statut</th>
+                <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let facture of listFacture ; let i = index"  >
+                <td>{{i+1}}</td>
+                <td>{{facture.date_emission}}</td>
+                <td>{{facture.ref}}</td>
+                <td>{{facture.description}}</td>
+                <td>{{facture.creancier}}</td>
+                <td>{{facture.montant_fac}} DH</td>
+                <td class="text-danger" style="font-weight: bold;">{{facture.status}}</td>
+                <td><button class="btn btn-primary actionButton" (click)="payerFactureClicked(facture.ref)">Pay</button></td>                
+            </tr>
+        </tbody>
+        </table>
+    </div>
+</div> -->
+
+<div class="container-fluid admin">
+    <!-- nav bar -->
+    
+    <!-- slide bar -->
+    <div class="container-fluid">
+      <div class="row no-gutters">
+        <div class="side col-12 col-md-2">
+          
+        </div>
+        <div class="col-12 col-md-10">
+          <div class="content">
+            <h2> Liste de facture Disponible</h2>
+          </div>
+          <br>
+          <br>
+              <div class="content2">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-11">
+                      <table class="table shadow table-hover" >
+                        <thead class="thead">
+                          <tr>
+                            <th>#</th>
+                            <th>Date-Emission</th>
+                            <th>Reference</th>
+                            <th>Description</th>
+                            <th>Creancier</th>
+                            <th>Montant</th>
+                            <th>Statut</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let facture of listFacture ; let i = index">
+                            <td>{{i+1}}</td>
+                            <td>{{facture.date_emission}}</td>
+                            <td>{{facture.ref}}</td>
+                            <td>{{facture.description}}</td>
+                            <td>{{facture.creancier}}</td>
+                            <td>{{facture.montant_fac}} DH</td>
+                            <td class="text-danger" style="font-weight: bold;">{{facture.status}}</td>     
+                            <td><button class="btn btn-primary actionButton" (click)="payerFactureClicked(facture.ref)" [disabled]="isPaiementEffectue">Pay</button></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                  </div>
+                </div>
+            
+              
+              
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
