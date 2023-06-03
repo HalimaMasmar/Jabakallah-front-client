@@ -1,0 +1,55 @@
+
+<section class="white-section" id="loginPage">
+  <div class="page-wrapper full-page">
+    <div class="container-fluid">
+      <div class="page-content d-flex align-items-center justify-content-center">
+        <div class="row w-100 mx-0 auth-page">
+          <div class="col-md-6 col-xl-6 mx-auto">
+            <div class="card card-login">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="auth-form-wrapper py-5" style="padding-left: 1.5rem; padding-right: 1.5rem">
+                    <a class="h4" style="color: #fff">JabkLah.com</a>
+                    <p class="" style="color: #e8e8e8">Welcome! Log in to your account.</p>
+                    <form #form="ngForm" (ngSubmit)="submitClientLogInForm(form)">
+                      <div class="form-group">
+                        <input [(ngModel)]="client.logIn" #LogIn="ngModel" name="logIn" type="text" id="login" placeholder="Enter your phone number" class="form-control" required minlength="5" maxlength="45" />
+                        <div *ngIf="LogIn.touched && LogIn.invalid" style="padding-top: 10px;">
+                          <div class="alert alert-warning" *ngIf="LogIn.errors.required" >This field is required</div>
+                          <div class="alert alert-warning" *ngIf="LogIn.errors.pattern">Invalid format for login (Ex: johnDoe123)</div>
+                          <div class="alert alert-warning" *ngIf="LogIn.errors.minlength">This field has a minimum length of 5</div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <input type="password" id="password" class="form-control" [(ngModel)]="client.password" #Password="ngModel" name="password" placeholder="Password" required minlength="5" />
+                        <div *ngIf="Password.touched && Password.invalid" style="padding-top: 10px;">
+                          <div class="alert alert-warning" *ngIf="Password.errors.required" >This field is required</div>
+                          <div class="alert alert-warning" *ngIf="Password.errors.minlength">Password must contain a minimum of 5 characters</div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <button class="btn btn-outline-light" type="submit" style="border-radius: 1rem" id="btnLogin">
+                          Login
+                        </button>
+                        <div class="form-outline mb-4">
+                          <div class="alert alert-danger" role="alert" *ngIf="isLoginFailed">Login failed: {{errorMessage}}</div>
+                        </div>
+                        <a class="" [routerLink]="['/forget-password']" style="float: right; border-radius: 1rem; color: #fff"><small>Forgot password</small></a>
+                      </div>
+                    </form>
+                    <a [routerLink]="['/register/verify']" class="d-block mt-3 text-decoration-none;" style="color: #fff"><small>Don't have an account? Sign up here</small></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Section: Design Block -->
+

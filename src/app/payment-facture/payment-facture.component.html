@@ -1,0 +1,25 @@
+<div class="content">
+  <h2>Paiement de facture</h2>
+  <div>
+    <div class="content2 row">
+      <div *ngFor="let produit of produits" class="col-6 produit">
+        <div class="facture row">
+          <div class="col-5">
+            <img src="{{ produit.image }}" class="img-fluid" />
+          </div>
+          <div class="col-7">
+            <h4>{{ produit.name }}</h4>
+            <p>{{ produit.description }}</p>
+            <button
+              class="btn-sm cancel-client-button btn"
+              type="button"
+              (click)="checkAvailableBill(produit.Username)"
+            >
+              <i class="fa-sharp fa-solid fa-eye fa-fw mr-3"></i>les factures
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
