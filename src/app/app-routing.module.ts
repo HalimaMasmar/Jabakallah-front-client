@@ -16,6 +16,7 @@ import { RechargeComponent } from './recharge/recharge.component';
 import { RechargeFormComponent } from './recharge-form/recharge-form.component';
 import { RechargeFormValiderComponent } from './recharge-form-valider/recharge-form-valider.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { ListCourrierComponent } from './list-courrier/list-courrier.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -33,6 +34,7 @@ const routes: Routes = [
       { path: 'changePassword', component: ChangePasswordComponent },
       { path: 'listFacture', component: ListFactureComponent },
       { path: 'recharge', component: RechargeComponent },
+      { path: 'courrier', component: ListCourrierComponent },
       {
         path: 'recharge/form/valider',
         component: RechargeFormValiderComponent,

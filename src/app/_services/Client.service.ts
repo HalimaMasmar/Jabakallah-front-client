@@ -8,6 +8,7 @@ import { Observable } from 'rxjs';
 import { ListFactureRequest } from '../RequestEntities/ListFactureRequest';
 import { PayerFactureRequest } from '../RequestEntities/PayerFactureRequest';
 import { PayerRechargeRequest } from '../RequestEntities/PayerRechargeRequest';
+import { Virement } from '../interfaces/virement';
 
 
 const httpOptions = {
@@ -98,6 +99,39 @@ export class ClientService {
  console.log("j'ai entré paid");
  return this.http.get<any[]>(this.clientUrlFacture+`listFacturePaid/${num}`,httpOptions);
 }
+
+public saveVirement(
+
+	montant: String,
+	ribSrc: String,
+	ribDest: String,
+	state: String,
+	date: String,
+	ownerphone:String,
+	cin:String,
+
+) {
+	return this.http.post<Virement>("http://localhost:8080/virement/effectuerVirement",
+		{
+			montant,
+			ribSrc,
+			ribDest,
+			state,
+			date,
+			ownerphone,
+			cin
+			
+		},
+		httpOptions
+	);
+}
+
+public GetListVirement(
+	num:String
+  ) :Observable<any[]>{
+   console.log("j'ai entré paid");
+   return this.http.get<any[]>(this.clientUrlVirement+`listVirement/${num}`,httpOptions);
+  }
 
  public payerRecharge(
   payerRechargeRequest:PayerRechargeRequest

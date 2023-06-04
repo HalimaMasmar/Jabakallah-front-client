@@ -27,6 +27,7 @@ import { RechargeComponent } from './recharge/recharge.component';
 import { RechargeFormComponent } from './recharge-form/recharge-form.component';
 import { RechargeFormValiderComponent } from './recharge-form-valider/recharge-form-valider.component';
 import { ListHistoriqueComponent } from './list-historique/list-historique.component';
+import { ListCourrierComponent } from './list-courrier/list-courrier.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { ListHistoriqueComponent } from './list-historique/list-historique.compo
     RechargeFormComponent,
     RechargeFormValiderComponent,
     ListHistoriqueComponent,
+    ListCourrierComponent,
   ],
   imports: [
     BrowserModule,
