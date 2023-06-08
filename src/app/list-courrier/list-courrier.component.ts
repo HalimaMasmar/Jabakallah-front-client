@@ -25,6 +25,7 @@ export class ListCourrierComponent implements OnInit {
       this.num = numTelAccess;
       this.clientService.GetListVirement(this.num).subscribe({
         next: data => {
+         
           console.log(data);
           this.listVirement=data;
         },
@@ -33,7 +34,7 @@ export class ListCourrierComponent implements OnInit {
         }
       }); 
     }
-   
+  
   }
   
 

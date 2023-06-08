@@ -1,8 +1,14 @@
 .card {
-  background-color: #fff;
+  color: #fff;
   border-radius: 23px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 1rem !important;
+  background: rgb(13, 65, 125)!important;
+  background: linear-gradient(
+    36deg,
+    rgba(13, 65, 125, 1) 0%,
+    rgba(19, 150, 189, 1) 100%
+  ) !important;
 }
 .card:hover {
   background-color: #e9ecf0;

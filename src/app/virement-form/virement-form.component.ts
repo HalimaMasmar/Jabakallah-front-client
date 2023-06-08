@@ -12,6 +12,7 @@ const numTel = window.sessionStorage.getItem("username");
   styleUrls: ['./virement-form.component.css'],
 })
 export class VirementFormComponent {
+  
   agent ={
     agentId:0,
     agentPassword:"",
@@ -36,7 +37,10 @@ export class VirementFormComponent {
     date: "",
     cin:"",
   }
-
+  goToRecharge() {
+    this.router.navigate(['clientHome/courrier']);
+  }
+  
 
   file:File;
   owneruid:string;
@@ -56,9 +60,7 @@ export class VirementFormComponent {
    }
 
   ngOnInit(): void {
-    if(this.tokenStorage.getToken()==null){
-      this.router.navigate(['/logIn']);
-    }
+ 
     
   }
 
@@ -81,8 +83,11 @@ export class VirementFormComponent {
     ).subscribe({
       next: data => {
         console.log("agent saved successfully");
+        
         this.owneruid=data.montant;
         console.log(data.ribdest);
+        
+
       },
       error: err => {
         this.errorMessage = err.error.message;
@@ -90,8 +95,12 @@ export class VirementFormComponent {
 
        
       }
-     
+    
     });
+    
   }
+  setTimeout(() => {
+    this.router.navigate(['clientHome/courrier']);
+  }, 2000); 
 }
 }

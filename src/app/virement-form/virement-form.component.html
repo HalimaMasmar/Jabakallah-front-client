@@ -26,6 +26,13 @@
                                         name="fname" placeholder="Enter your first name" required pattern="[a-zA-Z]+">
                                 </div>
 
+                                <div class="form-group col-sm-6 flex-column d-flex">
+                                  <label class="form-control-label px-3">C.I.N
+                                      <span class="text-danger"> *</span></label>
+
+                                  <input type="text" [(ngModel)]="virement.cin" #LastName="ngModel" id="lname"
+                                      name="lname" placeholder="Enter your C.I.N" required pattern="[a-zA-Z]+" />
+                              </div>
 
                                 <div class="form-group col-sm-6 flex-column d-flex">
                                     <label class="form-control-label px-3">Ville d'envoie
@@ -79,13 +86,7 @@
                                         name="lname" placeholder="Enter your last name" required pattern="[a-zA-Z]+"> -->
                                 </div>
 
-                                <div class="form-group col-sm-6 flex-column d-flex">
-                                  <label class="form-control-label px-3">C.I.N
-                                      <span class="text-danger"> *</span></label>
-
-                                  <input type="text" [(ngModel)]="virement.cin" #LastName="ngModel" id="lname"
-                                      name="lname" placeholder="Enter your C.I.N" required pattern="[a-zA-Z]+" />
-                              </div>
+                              
 
 
                                 <div class="form-group col-sm-6 flex-column d-flex">
@@ -148,7 +149,7 @@
 
 
 
-                                <div class="form-group col-sm-6 flex-column d-flex">
+                                <div class="form-group flex-column d-flex">
 
                                     <label class="form-control-label px-3">Date denvoie
                                         <span class="text-danger"> *</span></label>
@@ -160,7 +161,8 @@
                             <div class="row justify-content-center">
 
 
-                              <button type="submit" class="btn-block btn-primary">Add Courrier</button>
+                              <button type="submit" class="btn cancel-client-button btn-hover-danger">Add Courrier</button>
+                              
 
                       </div>
                         </form>

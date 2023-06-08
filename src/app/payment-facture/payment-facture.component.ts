@@ -18,7 +18,7 @@ export class PaymentFactureComponent implements OnInit {
       description: 'TELEPHONIE ET INTERNET',
       image: './assets/images/inwi.png',
       type: 'recharge',
-      Username: 'IAMRECHARGE',
+      Username: 'INWIRECHARGE',
     },
     {
       name: 'IAM FACTURES',
@@ -32,7 +32,7 @@ export class PaymentFactureComponent implements OnInit {
       description: 'TELEPHONIE ET INTERNET',
       image: './assets/images/orange.png',
       type: 'recharge',
-      Username: 'IAMRECHARGE',
+      Username: 'ORANGEFACTURE',
     },
     {
       name: 'REDAL',

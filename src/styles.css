@@ -140,6 +140,13 @@ app-nav-bar .nav-link {
   color: #0d417d;
   background-color: #cdeaf3;
   margin: 3% 3% 3% 0;
+
+}
+.cancel-client-button:hover {
+  background-color: #0d417d;
+   color: #cdeaf3;
+ 
+  
 }
 /* Agent buttons */
 .agent-button {

@@ -59,6 +59,6 @@ export class RechargeFormValiderComponent implements OnInit {
   }
 
   goToRecharge() {
-    this.router.navigate(['clientHome/recharge']);
+    this.router.navigate(['courrier']);
   }
 }
